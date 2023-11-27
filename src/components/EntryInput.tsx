@@ -46,7 +46,6 @@ export default function JournalEntryInput() {
           </label>
           <div className="mt-2 h-full">
             <textarea
-              //   onChange={handleTextChange}
               rows={4}
               name="comment"
               id="comment"
@@ -69,6 +68,12 @@ export default function JournalEntryInput() {
         </div>
       ) : (
         <div>
+          <label
+            htmlFor="comment"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            November 20th, 2023
+          </label>
           <div>{journalEntry}</div>
           <button
             onClick={handleEdit}

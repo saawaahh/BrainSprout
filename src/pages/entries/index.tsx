@@ -42,7 +42,7 @@ const Entries = () => {
            
         </section> */}
       <div className="relative h-screen bg-slate-400">
-        <div className="flex h-1/6 items-center justify-center px-14 text-center text-2xl">
+        <div className="flex h-1/6 items-center justify-center px-14 text-center text-4xl">
           <div>
             <div>Entries</div>
           </div>
