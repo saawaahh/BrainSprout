@@ -40,7 +40,7 @@ const write = () => {
             <EntryInput />
           </div>
         </div>
-        <BackButton />
+        {/* <BackButton /> */}
       </div>
       {/* <section className="mt-32 flex-col justify-center gap-10">
         <h1 className="font-poppins text-center text-4xl font-bold text-neutral-50">
