@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-screen md:flex">
-        <div className="flex h-2/3 items-center justify-center bg-slate-500 md:h-screen md:w-2/3">
+        <div className="flex h-2/3 items-center justify-center bg-slate-400 md:h-screen md:w-2/3">
           <div className="text-center">
             <div className="text-5xl md:text-6xl">☘️ BrainSprout</div>
             <div className="p-10">
