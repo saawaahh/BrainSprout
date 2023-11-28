@@ -1,4 +1,4 @@
-\import { api } from "@/utils/api";
+import { api } from "@/utils/api";
 import { useSession } from "next-auth/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -106,7 +106,7 @@ const Entry = () => {
                 {ratingToEmoji(entryData.moodRating).text}
               </div>
             )}
-            <p className="font-montserrat whitespace-pre-line bg-green-50 p-5 text-lg text-black">
+            <p className="font-montserrat whitespace-pre-line bg-gray-900 p-5 text-lg text-gray-50">
               {entryData?.content}
             </p>
           </div>
