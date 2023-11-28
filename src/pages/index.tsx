@@ -11,17 +11,20 @@ export default function Home() {
     <>
       <Head>
         <title>BrainSprout</title>
-        <meta name="description" content="An AI journalling app" />
+        <meta name="description" content="A journal with recovery in mind" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className="flex h-screen items-center bg-lime-800"
+        className={`flex h-screen items-center ${
+          sessionData ? "bg-teal-700" : "bg-cover bg-center"
+        }`}
+        style={sessionData ? {} : { backgroundImage: `url(/sprout.jpg)` }}
       >
         <div className="m-auto mt-64 flex flex-col justify-center gap-5 text-center align-middle">
           <h1 className="font-poppins bg-gradient-to-br from-white to-slate-100 box-decoration-slice bg-clip-text p-2 text-7xl font-extrabold text-transparent">
             BrainSprout
           </h1>
-          <h2 className="font-montserrat text-xl text-neutral-100">
+          <h2 className="font-montserrat text-xl text-bg-yellow-950">
             sprout your recovery
           </h2>
           <button
