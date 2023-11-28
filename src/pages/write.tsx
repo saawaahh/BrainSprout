@@ -58,7 +58,7 @@ const Write = () => {
             type="submit"
             className="font-poppins mx-auto w-2/3 whitespace-pre-line rounded-sm bg-gradient-to-br from-emerald-900 to-emerald-950 py-3 text-xl font-bold text-gray-50 md:w-1/2"
           >
-            Finish
+            Submit Entry
           </button>
         </form>
       </section>
