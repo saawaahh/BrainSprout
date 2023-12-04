@@ -7,44 +7,44 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Link from "next/link";
 import moment from "moment";
+import EntryListItem from "@/components/EntryListItem";
 
 const Entries = () => {
-    const { status: sessionStatus } = useSession(); 
-    const {replace} = useRouter();
+  const { status: sessionStatus } = useSession();
+  const { replace } = useRouter();
 
-    const { data: entriesData } = api.journalling.getAllEntries.useQuery(
-        undefined,
-        {
-          enabled: sessionStatus === "authenticated",
-        },
-      );
+  const { data: entriesData } = api.journalling.getAllEntries.useQuery(
+    undefined,
+    {
+      enabled: sessionStatus === "authenticated",
+    },
+  );
 
-    useEffect(() => {
-        if (sessionStatus === "unauthenticated") {
-            replace("/");
-        }
-    }, [sessionStatus]);
+  useEffect(() => {
+    if (sessionStatus === "unauthenticated") {
+      replace("/");
+    }
+  }, [sessionStatus]);
 
-    if (sessionStatus === "loading") {
-        return <Loading />;
-      }
-    
+  if (sessionStatus === "loading") {
+    return <Loading />;
+  }
 
-    return(
+  return (
     <>
-        <Head>
-            <title>Entries</title>
+      <Head>
+        <title>Entries</title>
+      </Head>
 
-        </Head>
-        <section className="mt-32 flex flex-col justify-center gap-10">
-            <h1 className="text-center font-poppins text-4xl font-bold text-neutral-50">
-                Entries
-            </h1>
-            {entriesData?.length === 0 ? (
-                <NoEntries />
-            ) : (
-            entriesData?.map((entry) => (
-                <Link
+      <section className="mt-32 flex flex-col justify-center gap-10">
+        <h1 className="font-poppins text-center text-4xl font-bold text-neutral-50">
+          Entries
+        </h1>
+        {entriesData?.length === 0 ? (
+          <NoEntries />
+        ) : (
+          entriesData?.map((entry) => (
+            <Link
               href={`/entries/${entry.id}`}
               key={entry.id}
               className="mx-auto flex w-1/2 flex-row rounded-sm bg-emerald-950 p-10"
@@ -58,13 +58,23 @@ const Entries = () => {
                 </p>
               </div>
             </Link>
-            ))
-        )} 
-        </section>
+          ))
+        )}
+      </section>
+      {/* <div className="relative h-screen bg-slate-400">
+        <div className="flex h-1/6 items-center justify-center px-14 text-center text-4xl">
+          <div>
+            <div>Entries</div>
+          </div>
+        </div>
+        <div className="h-5/6 overflow-auto">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <EntryListItem key={index} />
+          ))}
+        </div>
+      </div> */}
     </>
- 
-    );
+  );
 };
-
 
 export default Entries;
