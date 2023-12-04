@@ -34,13 +34,7 @@ const Entries = () => {
       <Head>
         <title>Entries</title>
       </Head>
-      {/* <section className="mt-32 flex flex-col justify-center gap-10">
-            <h1 className="text-center font-poppins text-4xl font-bold text-neutral-50">
-                Entries
-            </h1>
-            <NoEntries/>
-           
-        </section> */}
+
       <div className="relative h-screen bg-slate-400">
         <div className="flex h-1/6 items-center justify-center px-14 text-center text-4xl">
           <div>
