@@ -21,7 +21,7 @@ export const AIRouter = createTRPCRouter({
       });
 
       const prompt =
-        "Do sentiment analysis on the following statement between 1 and 10, 1 being negative and 10 being positive, return only the number so now extra text:";
+        "Do sentiment analysis on the following statement between 1 and 10, 1 being negative and 10 being positive, return only the number:";
 
       const aiResponse = await openai.completions.create({
         model: "gpt-3.5-turbo-instruct",

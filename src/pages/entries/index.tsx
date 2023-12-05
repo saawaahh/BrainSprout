@@ -47,13 +47,13 @@ const Entries = () => {
                 <Link
               href={`/entries/${entry.id}`}
               key={entry.id}
-              className="mx-auto flex w-1/2 flex-row rounded-sm bg-emerald-950 p-10"
+              className="mx-auto flex w-1/2 flex-row rounded-sm bg-teal-950 p-10"
             >
               <div className="truncate">
                 <p className="font-poppins text-lg text-gray-50">
                   {entry.content}
                 </p>
-                <p className="font-montserrat text-emerald-950">
+                <p className="font-montserrat text-teal-950">
                   {moment(entry.dateCreated).format("MMM Do YYYY")}
                 </p>
               </div>
