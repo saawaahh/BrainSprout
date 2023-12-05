@@ -65,7 +65,7 @@ export default function Home() {
             BrainSprout
           </h1>
           <h2 className="font-montserrat text-xl text-white">
-            Sarah Davidson, Bryceton Adams
+            Sarah Davidson, Bryceton Adams, Victoria Jordan
           </h2>
           <button
             onClick={sessionData ? () => void signOut() : () => void signIn()}
